@@ -1,0 +1,47 @@
+.Search {
+  border: 3px #362999 solid;
+  margin-bottom: 0;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.enter-search {
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid #362999;
+  background: transparent;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  margin: 30px 0 15px 0;
+  background: #362999;
+  padding: 10px 20px;
+  font-size: 17px;
+}
+
+.fahrenheit {
+  color: #3e3245;
+  text-decoration: none;
+}
+
+.fahrenheit:hover {
+  cursor: pointer;
+  color: #362999;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.celsius {
+  color: #3e3245;
+  text-decoration: none;
+}
+
+.celsius:hover {
+  cursor: pointer;
+  color: #362999;
+  text-decoration: underline;
+  font-weight: bold;
+}

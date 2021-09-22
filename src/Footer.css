@@ -1,0 +1,15 @@
+.Footer {
+  text-align: center;
+  color: #362999;
+  font-size: 13px;
+  padding-top: 30px;
+}
+
+.name-link {
+  text-decoration: none;
+  color: #362999;
+}
+
+.name-link:hover {
+  text-decoration: underline;
+}

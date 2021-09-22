@@ -1,0 +1,14 @@
+.forecast .forecast-title {
+  text-align: center;
+  padding: 15px;
+  color: #3e3245;
+  font-weight: 600;
+}
+
+.forecast .daily-forecast {
+  border: 3px #362999 solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 17px;
+}

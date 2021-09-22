@@ -1,0 +1,19 @@
+.Today {
+  border: 3px #362999 solid;
+  text-align: center;
+  border-radius: 80px;
+  margin-bottom: 80px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-size: 27px;
+}
+
+.Today .temp-now {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.Today .units {
+  font-size: 16px;
+  vertical-align: super;
+}
