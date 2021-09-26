@@ -14,6 +14,23 @@ export default function Footer() {
       >
         <em>Anjana Kurdina</em>
       </a>
+      , is open-sourced on{" "}
+      <a
+        href="https://github.com/AnjanaKurdina/weather-react-app"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        Github
+      </a>{" "}
+      and hosted by{" "}
+      <a
+        href="https://www.netlify.com/"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        Netlify
+      </a>
+      .
     </div>
   );
 }
