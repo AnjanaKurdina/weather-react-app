@@ -1,24 +1,24 @@
 import "./App.css";
-
-import Search from "./Search";
+import Footer from "./Footer";
 import Today from "./Today";
 import TodayForecast from "./TodayForecast";
 import Forecast from "./Forecast";
-import Footer from "./Footer";
 
-export default function App() {
+import Search from "./Search";
+
+export default function App(props) {
   return (
     <div className="App">
       <div className="container">
         <div className="row weather-today">
-          <Search />
+          <Search defaultCity="New York" />
           <div className="col-1"></div>
-          <Today />
+          <Today data={props.weatherData} />
           <div className="col-1"></div>
           <TodayForecast />
+          <Forecast />
+          <Footer />
         </div>
-        <Forecast />
-        <Footer />
       </div>
     </div>
   );
