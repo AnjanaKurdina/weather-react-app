@@ -5,7 +5,7 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <div className="Footer">
-      This website was coded by
+      This website was coded by{" "}
       <a
         className="name-link"
         href="https://www.linkedin.com/in/anjana-kurdina"
