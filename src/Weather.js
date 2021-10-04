@@ -7,9 +7,9 @@ import FormattedTime from "./FormattedTime";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 
-import "./Search.css";
+import "./Weather.css";
 
-export default function Search(props) {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
@@ -48,7 +48,7 @@ export default function Search(props) {
     return (
       <div className="container">
         <div className="row weather-today">
-          <div className="col-3 Search">
+          <div className="col-3 Weather">
             <form onSubmit={handleSubmit}>
               <input
                 type="input"

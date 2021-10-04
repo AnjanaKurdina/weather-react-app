@@ -1,12 +1,12 @@
 import "./App.css";
 
-import Search from "./Search";
+import Weather from "./Weather";
 import Footer from "./Footer";
 
 export default function App(props) {
   return (
     <div className="App">
-      <Search defaultCity="New York" />
+      <Weather defaultCity="New York" />
       <Footer />
     </div>
   );
