@@ -5,6 +5,7 @@ import Forecast from "./Forecast";
 import TemperatureUnits from "./TemperatureUnits";
 import FormattedTime from "./FormattedTime";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 
 import "./Search.css";
 
@@ -21,7 +22,7 @@ export default function Search(props) {
       feels: response.data.main.feels_like,
       high: response.data.main.temp_max,
       low: response.data.main.temp_min,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -83,18 +84,13 @@ export default function Search(props) {
                 <FormattedDate date={weatherData.date} />
               </strong>
             </div>
-            <br />
             Feels Like: <span>{Math.round(weatherData.feels)}</span> °F
             <br />
             High/Low: <span>{Math.round(weatherData.high)}</span>/
             <span>{Math.round(weatherData.low)}</span> °F
-            <br />
-            <img
-              className="clouds"
-              src={weatherData.icon}
-              alt={weatherData.description}
-            />
-            <br />
+            <div className="clouds">
+              <WeatherIcon code={weatherData.icon} />
+            </div>
             Humidity: <span>{Math.round(weatherData.humidity)}</span>%
             <br />
             Wind Speed: <span>{Math.round(weatherData.wind)}</span> mph

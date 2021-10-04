@@ -79,7 +79,7 @@
   border: 1px #362999 solid;
 }
 
-.clouds {
+.clouds canvas {
   text-transform: capitalize;
-  font-size: 30px;
+  font-size: 10px;
 }
