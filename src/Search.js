@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Today from "./Today";
-import TodayForecast from "./TodayForecast";
+
 import Forecast from "./Forecast";
+import TemperatureUnits from "./TemperatureUnits";
+import FormattedTime from "./FormattedTime";
+import FormattedDate from "./FormattedDate";
 
 import "./Search.css";
 
@@ -15,7 +17,7 @@ export default function Search(props) {
       ready: true,
       city: response.data.name,
       temp: response.data.main.temp,
-      time: "12:30pm",
+      date: new Date(response.data.dt * 1000),
       feels: response.data.main.feels_like,
       high: response.data.main.temp_max,
       low: response.data.main.temp_min,
@@ -65,9 +67,38 @@ export default function Search(props) {
             </button>
           </div>
           <div className="col-1"></div>
-          <Today data={weatherData} />
+          <div className="today col-4">
+            <div className="city-chosen">{weatherData.city}</div>
+            <div>
+              <TemperatureUnits fahrenheit={weatherData.temp} />
+            </div>
+            <div className="time">
+              <FormattedTime time={weatherData.date} />
+            </div>
+          </div>
           <div className="col-1"></div>
-          <TodayForecast data={weatherData} />
+          <div className="col-3 todayForecast">
+            <div className="date">
+              <strong>
+                <FormattedDate date={weatherData.date} />
+              </strong>
+            </div>
+            <br />
+            Feels Like: <span>{Math.round(weatherData.feels)}</span> °F
+            <br />
+            High/Low: <span>{Math.round(weatherData.high)}</span>/
+            <span>{Math.round(weatherData.low)}</span> °F
+            <br />
+            <img
+              className="clouds"
+              src={weatherData.icon}
+              alt={weatherData.description}
+            />
+            <br />
+            Humidity: <span>{Math.round(weatherData.humidity)}</span>%
+            <br />
+            Wind Speed: <span>{Math.round(weatherData.wind)}</span> mph
+          </div>
           <Forecast />
         </div>
       </div>
