@@ -1,5 +1,6 @@
 .Weather {
   border: 3px #362999 solid;
+  border-radius: 4px;
   margin-bottom: 0;
   padding-top: 30px;
   padding-bottom: 10px;
@@ -68,6 +69,7 @@
 
 .todayForecast {
   border: 3px #362999 solid;
+  border-radius: 4px;
   margin-bottom: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -77,6 +79,7 @@
 .date {
   text-align: center;
   border: 1px #362999 solid;
+  border-radius: 4px;
 }
 
 .clouds canvas {
