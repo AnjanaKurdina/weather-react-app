@@ -16,6 +16,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coord: response.data.coord,
       city: response.data.name,
       temp: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
@@ -89,13 +90,13 @@ export default function Weather(props) {
             High/Low: <span>{Math.round(weatherData.high)}</span>/
             <span>{Math.round(weatherData.low)}</span> °F
             <div className="clouds">
-              <WeatherIcon code={weatherData.icon} />
+              <WeatherIcon code={weatherData.icon} size={45} />
             </div>
             Humidity: <span>{Math.round(weatherData.humidity)}</span>%
             <br />
             Wind Speed: <span>{Math.round(weatherData.wind)}</span> mph
           </div>
-          <Forecast />
+          <Forecast coord={weatherData.coord} />
         </div>
       </div>
     );
