@@ -64,9 +64,6 @@ export default function Weather(props) {
                 City Search
               </button>
             </form>
-            <button type="button" className="btn btn-primary">
-              Current Location
-            </button>
           </div>
           <div className="col-1"></div>
           <div className="today col-4">
